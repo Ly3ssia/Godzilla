@@ -84,12 +84,11 @@ console.log(Date.now())
     let cse = new Discord.MessageEmbed()
       .setColor("BLURPLE")
       .setTitle(csw)
-           .setFooter("Godzilla - Çekiliş Sistemi").setDescription(`
+           .setFooter("Godzilla - Çekiliş Sistemi").setDescription(`           
 Bitiş: <t:${Math.floor(Date.now() /1000) + Math.floor(sures/1000)}:R> (<t:${Math.floor(Date.now() /1000) + Math.floor(sures/1000)}:f>)
 Düzenleyen: **${message.author}**
-Kazanan: **1**
-Katılımcı: **Çekiliş Bitince Gösterilicek.**
-`);
+Kazanan: **1**⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+Katılımcı: **Çekiliş Bitince Gösterilicek.**  `);
     csc.send({ embeds: [cse], components: [row] }).then((cs) => {
    db.set(`giveaway_${giveawayID}_${sures}`)
       db.set(`giveaway_${giveawayID}`, cs.id);
