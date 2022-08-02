@@ -8,7 +8,15 @@ module.exports = {
 
     async execute(client, guild) {
         console.log(`Giriş Başarılı!`)
-client.user.setActivity("Ticket <3 Ly3ssia")
+ar oyun = [
+      "🎉 Yeni Nesil Çekiliş Sistemi! 🎉",
+      "Sponsor: WonaCraft!"];
+
+ setInterval(function() {
+   var random = Math.floor(Math.random() * (oyun.length - 0 + 1) + 0);
+client.user.setStatus("idle")
+   client.user.setActivity(oyun[random], "");
+ }, 2 * 2500);
       
     
 
