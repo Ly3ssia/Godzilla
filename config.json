@@ -1,0 +1,17 @@
+{
+    "token": "OTU1MDQ1NTc0NTM1Njk2Mzg0.GzVe-8.iOYC3ZrGr1qMAXiRP7EEjvLm6QiwzeuT8Kxe6c",
+    "prefix": "g!",
+    "serverID": "1001844544985382982",
+    "welcome": {
+        "channelId": "1002268176270249994",
+        "message": {
+            "success": "{user} katıldı; tarafından davet edildi **{inviterName}** ; O sahip**{inviteCount}** davete",
+            "unknow": "J{user} Sunucuya Nasıl Katıldığını Bulamadım ?",
+            "vanity": "{user} Sunucuya Özel URL ile katıldı!",
+            "self-invite": "{user} kendi davetiyelerini kullanarak katıldı!"
+        },
+        "isEmbed": true,
+        "color": "#27ae60"
+   
+}
+}
