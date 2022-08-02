@@ -212,21 +212,25 @@ client.on("ready", async () => {
           .setTitle(data.odul)
           .setColor("BLURPLE")
           .setTimestamp().setDescription(`
-Sona Erdi: <t:${Math.floor(Date.now() /1000) + Math.floor(sure/1000)}:f>
+Sona Erdi: <t:${Math.floor(Date.now() /1000)}:R> (<t:${Math.floor(Date.now() /1000)}:f>)
 Düzenleyen: **<@${data.hosted}>**
 Kazanan: **<@${winner.join(">, <@>") || ""}>** 
-Katılımcı: ${kazanan2}`);
+Katılımcı: ${kazanan2}⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀`);
         mesaj.edit({ embeds: [sd], components: [row] })
     
       if (winner.join(", ")) {
         kanal.send(`**<@${winner}>** Tebrikler **${data.odul}** Kazandın!`);
         cdb.set(`cekilis.${giveawayID}`, "disabled")
-    
+      } else {
+        kanal.send("Çekilişte Yeterli Katılımcı Bulunamadı!")
+     mesaj.delete()
+     cdb.delete(`cekilis.${giveawayID}`, "disabled")
+        cdb.delete(`gwUsers_${msgID}`)
       }
       })
     };
     
-   
+ 
     }
   
   }
@@ -258,6 +262,7 @@ client.on("interactionCreate", async (interaction) => {
     );
     console.log("debug 2 trigger", giveawayID, msgID);
     if(interaction.user.id !== data.hosted) return interaction.reply({content: `Bu butonu sadece çekilişi düzenleyen (<@${data.hosted}>) kullanabilir`, ephemeral: true})
+   interaction.reply({content: "Yeni Kazanan Başarıyla Seçildi!", ephemeral: true})
     interaction.channel.send({content: `Tebrikler <@${kazanan}> Yeni Kazanan Sensin!` });
    
   
