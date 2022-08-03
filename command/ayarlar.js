@@ -9,7 +9,8 @@ module.exports = {
   category: "",
   description: ``,
   async execute(client, message, args) {
-
+let buton = db2.get(`buton_${message.guild.id}`)
+let oylama = db.get(`oylama_${message.guild.id}`)
 let sa = db.get(`kufur_${message.guild.id}`, '<:durum_aktif:998164460306968646>')
 let as = db.get(`kufur_${message.guild.id}`, '<:durum_inaktif:998164501943816255>')
 let rank = db.get(`aboneyetkilisi.${message.guild.id}`)
@@ -31,6 +32,7 @@ let cekilis = db.get(`cekilis.${message.guild.id}_${message.channel.id}`)
 .setTitle(`${message.guild.name} Sunucusu Ayarları!`)
 .addField("Abone Sistemi", rank ? "<:durum_aktif:998164460306968646>" : "<:durum_inaktif:998164501943816255>", true)
 .addField("Resimli Giriş Çıkış", butonrol ? "<:durum_aktif:998164460306968646>" : "<:durum_inaktif:998164501943816255>", true)
+.addField("Buton Rol", buton ? "<:durum_aktif:998164460306968646>" : "<:durum_inaktif:998164501943816255>", true)
 .addField("Mod-Log", log ? "<:durum_aktif:998164460306968646>" : "<:durum_inaktif:998164501943816255>", true)
 .addField("Oto-Rol", otorol ? "<:durum_aktif:998164460306968646>" : "<:durum_inaktif:998164501943816255>", true)
 .addField("Oto-Tag", ototag ? "<:durum_aktif:998164460306968646>" : "<:durum_inaktif:998164501943816255>", true)
@@ -42,6 +44,7 @@ let cekilis = db.get(`cekilis.${message.guild.id}_${message.channel.id}`)
 .addField("Caps Engel", caps ? "<:durum_aktif:998164460306968646>" : "<:durum_inaktif:998164501943816255>", true)
 .addField("Kayıt Sistemi", kayıt ? "<:durum_aktif:998164460306968646>" : "<:durum_inaktif:998164501943816255>", true)
 .addField("Aktif Çekiliş", cekilis ? "<:durum_aktif:998164460306968646>" : "<:durum_inaktif:998164501943816255>", true)
+.addField("Aktif Oylama", oylama ? "<:durum_aktif:998164460306968646>" : "<:durum_inaktif:998164501943816255>", true)
 .setColor("RED")
 message.channel.send({embeds: [embed]})
 }
