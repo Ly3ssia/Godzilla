@@ -155,7 +155,7 @@ client.on("ready", async () => {
           } else if(lyvalue1.includes(userId)) {
             let kazanan211 = cdb.get(`gwUsers_${msgID}`).length;
             cdb.unpush(`gwUsers_${msgID}`, userId);
-            interaction.reply({ content: `Başarıyla çekilişten ayrıldın.**(${kazanan211})**`, ephemeral: true })
+            interaction.reply({ content: `Başarıyla çekilişten ayrıldın. ` , ephemeral: true })
           } else {
             cdb.push(`gwUsers_${msgID}`, userId);
             let kazanan21 = cdb.get(`gwUsers_${msgID}`).length;
@@ -222,10 +222,18 @@ Katılımcı: ${kazanan2}⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀�
         kanal.send(`**<@${winner}>** Tebrikler **${data.odul}** Kazandın!`);
         cdb.set(`cekilis.${giveawayID}`, "disabled")
       } else {
-        kanal.send("Çekilişte Yeterli Katılımcı Bulunamadı!")
-     mesaj.delete()
      cdb.delete(`cekilis.${giveawayID}`, "disabled")
         cdb.delete(`gwUsers_${msgID}`)
+        let sd = new Discord.MessageEmbed()
+        .setTitle(data.odul)
+        .setColor("BLURPLE")
+        .setTimestamp().setDescription(`
+Sona Erdi: <t:${Math.floor(Date.now() /1000)}:R> (<t:${Math.floor(Date.now() /1000)}:f>)
+Düzenleyen: **<@${data.hosted}>**
+Kazanan: Bilinmiyor. 
+Katılımcı: 0⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀`);
+mesaj.edit({embeds: [sd], components: []})
+
       }
       })
     };
