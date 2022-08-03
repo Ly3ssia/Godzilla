@@ -133,7 +133,7 @@ if (interaction.customId == "help3") {
     if(interaction.user.id !== message.author.id) return interaction.reply({embeds: [embedd], ephemeral: true})
     const embed = new Discord.MessageEmbed()
 .setTitle("Godzilla - Kullanıcı Komutları!")
-.setDescription(`${prefix}ara-110\n${prefix}ara-112\n${prefix}ara-155\n${prefix}avatar\n${prefix}banner\n${prefix}belge\n${prefix}kaç-cm\n${prefix}belge\n${prefix}dolar\n${prefix}davet\n${prefix}emoji-bilgi\n${prefix}emoji-id\n${prefix}kanal-id\n${prefix}kullanıcı-id\n${prefix}emojiler\n${prefix}hapishane\n${prefix}istatistik\n${prefix}ping\n${prefix}snake\n${prefix}snipe`)
+.setDescription(`${prefix}ara-110\n${prefix}ara-112\n${prefix}ara-155\n${prefix}avatar\n${prefix}belge\n${prefix}kaç-cm\n${prefix}belge\n${prefix}dolar\n${prefix}davet\n${prefix}emoji-bilgi\n${prefix}emoji-id\n${prefix}kanal-id\n${prefix}kullanıcı-id\n${prefix}emojiler\n${prefix}hapishane\n${prefix}istatistik\n${prefix}ping\n${prefix}snake\n${prefix}snipe`)
 radio.edit({embeds: [embed], components: [row2, row]})
 interaction.reply({content: "Başarıyla kategori değiştirildi!", ephemeral: true}) 
 
@@ -195,7 +195,7 @@ if (!interaction.isSelectMenu()) return;
             if(interaction.user.id !== message.author.id) return interaction.reply({embeds: [embedd], ephemeral: true})
             const embed = new Discord.MessageEmbed()
             .setTitle("Godzilla - Kullanıcı Komutları!")
-            .setDescription(`${prefix}ara-110\n${prefix}ara-112\n${prefix}ara-155\n${prefix}avatar\n${prefix}banner\n${prefix}belge\n${prefix}kaç-cm\n${prefix}belge\n${prefix}dolar\n${prefix}davet\n${prefix}emoji-bilgi\n${prefix}emoji-id\n${prefix}kanal-id\n${prefix}kullanıcı-id\n${prefix}emojiler\n${prefix}hapishane\n${prefix}istatistik\n${prefix}ping\n${prefix}snake\n${prefix}snipe`)
+            .setDescription(`${prefix}ara-110\n${prefix}ara-112\n${prefix}ara-155\n${prefix}avatar\n${prefix}belge\n${prefix}kaç-cm\n${prefix}belge\n${prefix}dolar\n${prefix}davet\n${prefix}emoji-bilgi\n${prefix}emoji-id\n${prefix}kanal-id\n${prefix}kullanıcı-id\n${prefix}emojiler\n${prefix}hapishane\n${prefix}istatistik\n${prefix}ping\n${prefix}snake\n${prefix}snipe`)
             radio.edit({embeds: [embed], components: [row2, row]})
             
         interaction.reply({content: "Başarıyla kategori değiştirildi!", ephemeral: true}) 
