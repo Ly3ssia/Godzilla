@@ -253,7 +253,7 @@ client.on("interactionCreate", async (interaction) => {
 
     let kazanan = cdb.get(`gwUsers_${msgID}`)[
       Math.floor(Math.random() * cdb.get(`gwUsers_${msgID}`).length)
-    ];
+    ]
     let kazanan2 = cdb.get(`gwUsers_${msgID}`).length;
 
     console.log(
@@ -264,7 +264,7 @@ client.on("interactionCreate", async (interaction) => {
     if(interaction.user.id !== data.hosted) return interaction.reply({content: `Bu butonu sadece çekilişi düzenleyen (<@${data.hosted}>) kullanabilir`, ephemeral: true})
    interaction.reply({content: "Yeni Kazanan Başarıyla Seçildi!", ephemeral: true})
     interaction.channel.send({content: `Tebrikler <@${kazanan}> Yeni Kazanan Sensin!` });
-   
+    
   
   }
 });
