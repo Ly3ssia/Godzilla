@@ -110,7 +110,9 @@ message.channel.send({embeds: [embed], components: [row2, row]}).then(radio => {
 const embeds = new Discord.MessageEmbed()   
 .setTitle("Godzilla - Moderasyon Komutları!")
 .setDescription(`${prefix}ban\n${prefix}a\n${prefix}buton-rol\n${prefix}abone-rol\n${prefix}abone-yetkilisi\n${prefix}ban-list\n${prefix}bot-otorol\n${prefix}caps-engel\n${prefix}emoji-ayarla\n${prefix}emoji-sıfırla\n${prefix}emoji-çal\n${prefix}forceban\n${prefix}foto-chat\n${prefix}giriş-çıkış\n${prefix}giriş-çıkış-sıfırla\n${prefix}kayıt-rol\n${prefix}kayıt-log\n${prefix}kayıt\n${prefix}mod-log\n${prefix}nuke\n${prefix}oto-rol\n${prefix}oto-tag\n${prefix}prefix\n${prefix}oylama\n${prefix}sil\n${prefix}yaz`)
-radio.edit({embeds: [embeds], components: [row2, row]})    
+radio.edit({embeds: [embeds], components: [row2, row]})   
+interaction.reply({content: "Başarıyla kategori değiştirildi!", ephemeral: true}) 
+
 }
 if (interaction.customId == "help2") {
     const embedd = new Discord.MessageEmbed()
@@ -121,6 +123,8 @@ if (interaction.customId == "help2") {
 .setTitle("Godzilla - Çekiliş Komutları!")
 .setDescription(`${prefix}başlat\nReroll komutu çekilişi açtığınızda çekiliş bitince buton olarak gelicektir.`)
 radio.edit({embeds: [embed], components: [row2, row]})
+interaction.reply({content: "Başarıyla kategori değiştirildi!", ephemeral: true}) 
+
 }
 if (interaction.customId == "help3") {
     const embedd = new Discord.MessageEmbed()
@@ -131,6 +135,8 @@ if (interaction.customId == "help3") {
 .setTitle("Godzilla - Kullanıcı Komutları!")
 .setDescription(`${prefix}ara-110\n${prefix}ara-112\n${prefix}ara-155\n${prefix}avatar\n${prefix}banner\n${prefix}belge\n${prefix}kaç-cm\n${prefix}belge\n${prefix}dolar\n${prefix}davet\n${prefix}emoji-bilgi\n${prefix}emoji-id\n${prefix}kanal-id\n${prefix}kullanıcı-id\n${prefix}emojiler\n${prefix}hapishane\n${prefix}istatistik\n${prefix}ping\n${prefix}snake\n${prefix}snipe`)
 radio.edit({embeds: [embed], components: [row2, row]})
+interaction.reply({content: "Başarıyla kategori değiştirildi!", ephemeral: true}) 
+
 }
 if (interaction.customId == "help4") {
     const embedd = new Discord.MessageEmbed()
@@ -141,6 +147,7 @@ if (interaction.customId == "help4") {
 .setTitle("Godzilla - Destek Komutları!")
 .setDescription(`${prefix}ticket-yetkilisi\n${prefix}ticket-menü`)
 radio.edit({embeds: [embed], components: [row2, row]})
+interaction.reply({content: "Başarıyla kategori değiştirildi!", ephemeral: true}) 
 }
 if (interaction.customId == "help5") {
     const embedd = new Discord.MessageEmbed()
@@ -151,6 +158,8 @@ if (interaction.customId == "help5") {
 .setTitle("Godzilla - Davet Komutları!")
 .setDescription(`${prefix}invite\n${prefix}leaderboard`)
 radio.edit({embeds: [embed], components: [row2, row]})
+
+interaction.reply({content: "Başarıyla kategori değiştirildi!", ephemeral: true}) 
 }
 if (!interaction.isSelectMenu()) return;
         if (interaction.customId == "yardım") {
@@ -163,6 +172,8 @@ if (!interaction.isSelectMenu()) return;
       .setTitle("Godzilla - Moderasyon Komutları!")
       .setDescription(`${prefix}ban\n${prefix}a\n${prefix}buton-rol\n${prefix}abone-rol\n${prefix}abone-yetkilisi\n${prefix}ban-list\n${prefix}bot-otorol\n${prefix}caps-engel\n${prefix}emoji-ayarla\n${prefix}emoji-sıfırla\n${prefix}emoji-çal\n${prefix}forceban\n${prefix}foto-chat\n${prefix}giriş-çıkış\n${prefix}giriş-çıkış-sıfırla\n${prefix}kayıt-rol\n${prefix}kayıt-log\n${prefix}kayıt\n${prefix}mod-log\n${prefix}nuke\n${prefix}oto-rol\n${prefix}oto-tag\n${prefix}prefix\n${prefix}oylama\n${prefix}sil\n${prefix}yaz`)
       radio.edit({embeds: [embeds], components: [row2, row]})   
+
+      interaction.reply({content: "Başarıyla kategori değiştirildi!", ephemeral: true}) 
             }
         }
         if (interaction.values[0] == "giveaway") {
@@ -174,6 +185,8 @@ if (!interaction.isSelectMenu()) return;
             .setTitle("Godzilla - Çekiliş Komutları!")
             .setDescription(`${prefix}başlat\nReroll komutu çekilişi açtığınızda çekiliş bitince buton olarak gelicektir.`)
             radio.edit({embeds: [embed], components: [row2, row]})
+          
+        interaction.reply({content: "Başarıyla kategori değiştirildi!", ephemeral: true}) 
         }
         if (interaction.values[0] == "kullanıcı") {
             const embedd = new Discord.MessageEmbed()
@@ -184,6 +197,8 @@ if (!interaction.isSelectMenu()) return;
             .setTitle("Godzilla - Kullanıcı Komutları!")
             .setDescription(`${prefix}ara-110\n${prefix}ara-112\n${prefix}ara-155\n${prefix}avatar\n${prefix}banner\n${prefix}belge\n${prefix}kaç-cm\n${prefix}belge\n${prefix}dolar\n${prefix}davet\n${prefix}emoji-bilgi\n${prefix}emoji-id\n${prefix}kanal-id\n${prefix}kullanıcı-id\n${prefix}emojiler\n${prefix}hapishane\n${prefix}istatistik\n${prefix}ping\n${prefix}snake\n${prefix}snipe`)
             radio.edit({embeds: [embed], components: [row2, row]})
+            
+        interaction.reply({content: "Başarıyla kategori değiştirildi!", ephemeral: true}) 
         }
         if (interaction.values[0] == "destek") {
             const embedd = new Discord.MessageEmbed()
@@ -194,6 +209,7 @@ if (!interaction.isSelectMenu()) return;
         .setTitle("Godzilla - Destek Komutları!")
         .setDescription(`${prefix}ticket-yetkilisi\n${prefix}ticket-menü`)
         radio.edit({embeds: [embed], components: [row2, row]})
+        interaction.reply({content: "Başarıyla kategori değiştirildi!", ephemeral: true}) 
         }
         if (interaction.values[0] == "davet") {
             const embedd = new Discord.MessageEmbed()
@@ -204,6 +220,7 @@ if (!interaction.isSelectMenu()) return;
         .setTitle("Godzilla - Davet Komutları!")
         .setDescription(`${prefix}invite\n${prefix}leaderboard`)
         radio.edit({embeds: [embed], components: [row2, row]})
+        interaction.reply({content: "Başarıyla kategori değiştirildi!", ephemeral: true}) 
         }
     })
     })
