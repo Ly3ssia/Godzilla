@@ -109,7 +109,7 @@ message.channel.send({embeds: [embed], components: [row2, row]}).then(radio => {
           if(interaction.user.id !== message.author.id) return interaction.reply({embeds: [embedd], ephemeral: true})
 const embeds = new Discord.MessageEmbed()   
 .setTitle("Godzilla - Moderasyon Komutları!")
-.setDescription(`${prefix}ban\n${prefix}a\n${prefix}buton-rol\n${prefix}abone-rol\n${prefix}abone-yetkilisi\n${prefix}ban-list\n${prefix}bot-otorol\n${prefix}caps-engel\n${prefix}emoji-ayarla\n${prefix}emoji-sıfırla\n${prefix}emoji-çal\n${prefix}forceban\n${prefix}foto-chat\n${prefix}giriş-çıkış\n${prefix}giriş-çıkış-sıfırla\n${prefix}kayıt-rol\n${prefix}kayıt-log\n${prefix}kayıt\n${prefix}mod-log\n${prefix}nuke\n${prefix}oto-rol\n${prefix}oto-tag\n${prefix}prefix\n${prefix}oylama\n${prefix}sil\n${prefix}yaz`)
+.setDescription(`${prefix}ban\n${prefix}a\n${prefix}buton-rol\n${prefix}abone-rol\n${prefix}abone-yetkilisi\n${prefix}ban-list\n${prefix}bot-otorol\n${prefix}caps-engel\n${prefix}emoji-ayarla\n${prefix}emoji-sıfırla\n${prefix}emoji-çal\n${prefix}forceban\n${prefix}foto-chat\n${prefix}giriş-çıkış\n${prefix}kayıt-rol\n${prefix}kayıt-log\n${prefix}kayıt\n${prefix}mod-log\n${prefix}nuke\n${prefix}oto-rol\n${prefix}oto-tag\n${prefix}prefix\n${prefix}oylama\n${prefix}sil\n${prefix}yaz`)
 radio.edit({embeds: [embeds], components: [row2, row]})   
 interaction.reply({content: "Başarıyla kategori değiştirildi!", ephemeral: true}) 
 
@@ -170,7 +170,7 @@ if (!interaction.isSelectMenu()) return;
                 if(interaction.user.id !== message.author.id) return interaction.reply({embeds: [embedd], ephemeral: true})
       const embeds = new Discord.MessageEmbed()   
       .setTitle("Godzilla - Moderasyon Komutları!")
-      .setDescription(`${prefix}ban\n${prefix}a\n${prefix}buton-rol\n${prefix}abone-rol\n${prefix}abone-yetkilisi\n${prefix}ban-list\n${prefix}bot-otorol\n${prefix}caps-engel\n${prefix}emoji-ayarla\n${prefix}emoji-sıfırla\n${prefix}emoji-çal\n${prefix}forceban\n${prefix}foto-chat\n${prefix}giriş-çıkış\n${prefix}giriş-çıkış-sıfırla\n${prefix}kayıt-rol\n${prefix}kayıt-log\n${prefix}kayıt\n${prefix}mod-log\n${prefix}nuke\n${prefix}oto-rol\n${prefix}oto-tag\n${prefix}prefix\n${prefix}oylama\n${prefix}sil\n${prefix}yaz`)
+      .setDescription(`${prefix}ban\n${prefix}a\n${prefix}buton-rol\n${prefix}abone-rol\n${prefix}abone-yetkilisi\n${prefix}ban-list\n${prefix}bot-otorol\n${prefix}caps-engel\n${prefix}emoji-ayarla\n${prefix}emoji-sıfırla\n${prefix}emoji-çal\n${prefix}forceban\n${prefix}foto-chat\n${prefix}giriş-çıkış\n${prefix}kayıt-rol\n${prefix}kayıt-log\n${prefix}kayıt\n${prefix}mod-log\n${prefix}nuke\n${prefix}oto-rol\n${prefix}oto-tag\n${prefix}prefix\n${prefix}oylama\n${prefix}sil\n${prefix}yaz`)
       radio.edit({embeds: [embeds], components: [row2, row]})   
 
       interaction.reply({content: "Başarıyla kategori değiştirildi!", ephemeral: true}) 
