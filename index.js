@@ -47,6 +47,100 @@ client.on("guildMemberAdd", async member => {
 
 }
 )
+const Canvas = require("canvas")
+const sda = require("quick.db")
+client.on('guildMemberAdd', async member => {
+  let hgbb = sda.fetch(`hgbb_${member.guild.id}`)
+  if(!hgbb) return;
+  if(hgbb) {
+  const applyText = (canvas, text) => {
+const context = canvas.getContext('2d');
+let fontSize = 70;
+
+do {
+  context.font = `${fontSize -= 10}px sans-serif`;
+} while (context.measureText(text).width > canvas.width - 300);
+
+return context.font;
+};
+
+const canvas = Canvas.createCanvas(700, 250);
+  const context = canvas.getContext('2d');
+
+  const background = await Canvas.loadImage('https://cdn.discordapp.com/attachments/1003711538386980884/1004676561762521088/unknown.png');
+  context.drawImage(background, 0, 0, canvas.width, canvas.height);
+
+  context.strokeRect(0, 0, canvas.width, canvas.height);
+
+  context.font = '28px sans-serif';
+  context.fillStyle = '#ffffff';
+  //context.fillText('Hoşgeldin !', canvas.width / 2.5, canvas.height / 3.5);
+
+  context.fillStyle = '#ffffff';
+
+
+  context.beginPath();
+  context.arc(125, 125, 100, 0, Math.PI * 2, true);
+  context.closePath();
+  context.clip();
+
+  const avatar = await Canvas.loadImage(member.user.displayAvatarURL({ format: 'jpg' }));
+  context.drawImage(avatar, 25, 25, 200, 200);
+
+  const attachment = new Discord.MessageAttachment(canvas.toBuffer(), 'hg.png');
+
+
+client.channels.cache.get(hgbb).send({content: `Sunucuya Hoşgeldin <@${member.user.id}>!`, files: [attachment]});
+}
+  
+});
+
+client.on('guildMemberRemove', async member => {
+  let hgbb = sda.fetch(`hgbb_${member.guild.id}`)
+  if(!hgbb) return;
+  if(hgbb) {
+  const applyText = (canvas, text) => {
+const context = canvas.getContext('2d');
+let fontSize = 70;
+
+do {
+  context.font = `${fontSize -= 10}px sans-serif`;
+} while (context.measureText(text).width > canvas.width - 300);
+
+return context.font;
+};
+
+const canvas = Canvas.createCanvas(700, 250);
+  const context = canvas.getContext('2d');
+
+  const background = await Canvas.loadImage('https://cdn.discordapp.com/attachments/1003711538386980884/1005022082578530385/20220805_105838.png');
+  context.drawImage(background, 0, 0, canvas.width, canvas.height);
+
+  context.strokeRect(0, 0, canvas.width, canvas.height);
+
+  context.font = '28px sans-serif';
+  context.fillStyle = '#ffffff';
+  //context.fillText('Hoşgeldin !', canvas.width / 2.5, canvas.height / 3.5);
+
+
+  context.fillStyle = '#ffffff';
+
+
+  context.beginPath();
+  context.arc(125, 125, 100, 0, Math.PI * 2, true);
+  context.closePath();
+  context.clip();
+
+  const avatar = await Canvas.loadImage(member.user.displayAvatarURL({ format: 'jpg' }));
+  context.drawImage(avatar, 25, 25, 200, 200);
+
+  const attachment = new Discord.MessageAttachment(canvas.toBuffer(), 'hg.png');
+
+
+client.channels.cache.get(hgbb).send({content: `**${member.user.tag}**, Sunucudan Ayrıldı.`, files: [attachment]});
+}
+  
+});
 {
   const { MessageButton, MessageActionRow } = require("discord.js")
   const edb = require("croxydb")
